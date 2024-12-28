@@ -499,6 +499,24 @@ print_r(array_change_key_case($age2,CASE_UPPER));
 
 echo "<br>";
 
+
+// Write a PHP function to calculate the factorial of a number.
+
+function factorial($number) {
+    if ($number < 0) {
+        echo "this number is nagetive";
+    }elseif($number === 1 || $number === 0){
+        echo "1";
+    }else{
+        $result = 1; 
+        for ($i=1; $i <= $number; $i++) { 
+            $result = $result * $i;
+        }
+        echo "This factorial is= " . $result;
+    }
+}
+factorial(3);
+
 ?> 
 </body>
 </html>
