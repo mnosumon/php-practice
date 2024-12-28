@@ -517,6 +517,46 @@ function factorial($number) {
 }
 factorial(3);
 
+echo "<br>";
+
+$helo = "HanP, is as proa, 323#@$, alllj4GG";
+$normalString = strtolower(preg_replace("/[^A-Za-z0-9]/", '', $helo));
+$reverseString = strrev($normalString);
+if ($normalString === $reverseString) {
+    echo "heloo";
+}else{
+    echo "fase";
+}
+// echo $normalString === $reverseString;
+
+echo "<br>";
+
+
+
+// Create a PHP function to check if a string is a palindrome. 
+    // meaning in bangla: 1ti string 1ti palindrome kina seta php function create kore check koro
+
+    function isPalindrome($string) {
+        // Remove spaces and non-alphanumeric characters, and convert to lowercase
+        $cleanString = strtolower(preg_replace("/[^A-Za-z0-9]/", '', $string));
+        
+        // Reverse the cleaned string
+        $reversedString = strrev($cleanString);
+    
+        // Check if the original cleaned string is equal to the reversed string
+        return $cleanString === $reversedString;
+    }
+    
+    // Example usage:
+    $testString = "A man, a plan, a canal, Panama";
+    if (isPalindrome($testString)) {
+        echo "'$testString' is a palindrome.";
+    } else {
+        // echo "\"$testString\" is not a palindrome.";
+    }
+    echo "<br>";
+
+
 ?> 
 </body>
 </html>
