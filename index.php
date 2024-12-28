@@ -9,124 +9,6 @@
 <?php
 
 
-// for ($i = 1; $i <= 5; $i++) {
-//     echo "Number: $i<br>";
-// }
-
-// $count = 1;
-// do {
-//     echo "Count: $count<br>";
-//     $count++;
-// } while ($count <= 50);
-
-// $colors = ["Red", "Green", "Blue"];
-// foreach ($colors as $color) {
-//     echo "Color: $color<br>";
-// }
-// $person = ["name" => "John", "age" => 30];
-// foreach ($person as $key => $value) {
-//     echo "$key: $value<br>";
-// }
-// $persone = ["group" => "pakidstan", "player" => "babar", "run" => 211];
-// foreach ($persone as $key => $value) {
-//     echo "$key: $value <br>";
-// }
-
-// function sayHello() {
-//     echo "Hello, World!";
-// }
-// sayHello()
-
-// function greet($name = "Guest") {
-//     echo "Hello, $name! <br>";
-// }
-
-// greet();         // Output: Hello, Guest!
-// greet("Alice");  // Output: Hello, Alice!
-// greet("Abbas");  // Output: Hello, Alice!
-
-// function add($a, $b) {
-// return $a + $b;
-  
-// }
-
-// $sum = add(5, 10); // $result is 15
-//  echo   $sum    // Output: 15
-
-// function sum(...$numbers) {
-//     return array_sum($numbers);
-// }
-
-// echo sum(1, 2, 3, 4); // Output: 10
-// function functionName(&$parameter) {
-//     // Modify $parameter
-// }
-// function increment(&$value) {
-//    return $value++;
-// }
-
-// $num = 5;
-// increment($num);
-// echo $num; // Output: 6
-
-// $greet = function($name) {
-//     return "Hello, $name!";
-// };
-
-// echo $greet("Alice"); // Output: Hello, Alice!
-
-// $add = fn($a, $b) => 
-//      $a + $b;
-
-// echo $add(5, 10); 
-
-// $array = array("key1" => "value1", "key2" => "value2", "key3" => "value3");
-// echo $array["key1"];  // Output: value1
-
-// $person = ["name" => "John", "age" => 30, "city" => "New York"];
-// echo $person["name"] . "<br>"; // Output: John
-// echo $person["age"];  // Output: 30
-// echo $person["city"]
-
-// $person = ["name" => "John", "age" => 30, "city" => "New York"];
-
-
-// $person["age"] = 39; // Modifying the value
-// echo $person["age"]; // Output: 31
-
-// $contacts = [
-//     ["name" => "John", "email" => "john@example.com"],
-//     ["name" => "Jane", "email" => "jane@example.com"]
-// ];
-
-// echo $contacts[0]["email"] . "<br>";  // Output: John
-// echo $contacts[1]["name"]; // Output: jane@example.com
-
-// $text = "Hello, world! Suomn";
-// echo strlen($text); 
-
-
-// $text = "Hello, world!";
-// echo str_replace("world", "PHP", $text);  // Output: Hello, PHP!
-// $text = "dark, world!";
-// echo str_replace("dark, world!", "Nuruddin Osman", $text);  // Output: Hello, PHP!
-
-// $text = "Hello, world!";
-// echo substr($text, 7, 3);  // Output: world
-
-// $text = "hello, world! amar sonar bangla ami tomay valobasi chirodin tomar akash tomar batas amat prane vajay bashi ";
-// echo ucwords($text);  // Output: Hello, World!
-
-// $text = "  Hello, world!  ";
-// echo trim($text);  // Output: Hello, world!
-
-// $text = "Hello! ";
-// echo str_repeat($text, 3);  // Output: Hello! Hello! Hello!
-
-// $text = "Hello, world!";
-// echo strpos($text, "world");  // Output: 7 (position of "world")
-
-
 // What are the different data types in PHP? Provide examples of each.
         // php te besh koyek dhoroner data type royeche. tar moddhe segoloke 2 vage vag kora jete pare. 1) scaler data type 2) compound data type 
         
@@ -463,7 +345,17 @@
     // foreach ($car as $x => $y) {
     //   echo "$x: $y <br>";
     // }
-    
+
+
+
+    // php constants
+
+
+    define("name", "Md Nuruddin Osman");
+    function myName() {
+        echo name;
+    }
+    myName()
 
       
 
