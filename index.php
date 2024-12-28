@@ -350,15 +350,154 @@
 
     // php constants
 
+    // define("name", "Md Nuruddin Osman");
+    // function myName() {
+    //     echo name;
+    // }
+    // myName()
 
-    define("name", "Md Nuruddin Osman");
-    function myName() {
-        echo name;
+    // Array Array 
+// Access array items
+
+    $carss = ["apple", "bananas", "orange", "grap"];
+    echo $carss[1] . "<br>";
+    $carss = array("brand" => "Ford", "model" => "Mustang", "year" => 1964);
+    echo $carss["year"] . "<br>";
+
+
+  
+// Update Array items
+
+    $garis = ["apple", "bananas", "orange", "grap"];
+    $garis[3] = 2024;
+    print_r($garis) . "<br>";
+
+    echo   "<br>";
+
+    $gari = array("brand" => "Ford", "model" => "Mustang", "year" => 1964);
+    $gari["year"] = 2024;
+    print_r($gari) . "<br>";
+    echo   "<br>";
+
+
+
+    
+// Add Array items
+
+    $fruits = array("Apple", "Banana", "Cherry");
+    $fruits[] = "Orange";   // post add single item
+    
+
+    echo   "<br>";
+
+    $fruit = array("Apple"=>"250tk", "Banana"=>"50tk", "Cherry"=>"700tk");
+    $fruit["Orange"]="400tk";    // post add single item
+    print_r($fruit) . "<br>";
+    echo   "<br>";
+
+    $fruit1 = ["Apple"=>"250tk", "Banana"=>"50tk", "Cherry"=>"700tk"];
+    array_push($fruit1, ["orange"=>"400tk", "mango"=>"300tk"]);   // post add multiple item
+    print_r($fruit1) . "<br>";
+    echo   "<br>";
+
+    $fruits1 = array("Apple", "Banana", "Cherry");
+    array_push($fruits1, "mango", "grap"); // post add multiple item
+    print_r($fruits1);
+    echo   "<br>";
+
+// foreach Array items
+
+    $garis = array("Volvo", "BMW", "Toyota");
+    foreach ($garis as &$x) {
+        echo $x . "<br>"; 
     }
-    myName()
+        
+    $garis1 = ["man"=>["Nuruddin", "Sabbvir", "AliKhan"], "woman"=>["Nafisa", "Akila"]];
+    foreach ($garis1 as $category=>$inner_array){
+        echo "<strong>$category</strong><br>";
+        foreach ($inner_array as $item){
+            echo $item . "<br>";
+        }
+    }
+    echo   "<br>";
 
-      
+    $cars2 = array("Volvo", "BMW", "Toyota");
+        foreach ($cars2 as &$x) {
+            $x = "Frado";
+        }
+        unset($x);
+        var_dump($cars2);
 
+        echo   "<br>";
+
+    $cars3 = array("Volvo", "BMW", "Toyota");
+        unset($cars3[1]);
+        $cars3[1] = "ad";
+        print_r($cars3) . "<br>";
+       
+
+        echo   "<br>";
+
+// Array sort method : =>
+// 1) sort
+// 2) rsort
+// 3) asort
+// 4) ksort
+// 5) arsort
+// 6) krsort
+
+
+$name3 = ["sumon", "shakil", "mostak", "sazzad"];
+sort($name3);       // 1) sort meaning in reverse
+print_r($name3);
+
+echo   "<br>";
+
+$name4 = ["sumon", "shakil", "mostak", "sazzad"];
+rsort($name4);      // 2) rsort meaning in noraml behavior
+print_r($name4);
+
+echo   "<br>";
+
+
+
+
+$name5 = ["sumon"=> "23", "shakil"=> "56", "mostak"=> "67", "sazzad"=>"21"];
+asort($name5);
+print_r($name5);
+foreach($name5 as $item => $value){
+    echo "keys= " . $item . ", value= " . $value . ", ";
+    echo "<br>";
+}   // 3) asort meaning in serial maintaince from minmum to maximum 
+
+echo "<br>";
+
+$name6 = ["sumon"=> "23", "Ashakil"=> "56", "mostak"=> "67", "Dsazzad"=>"21"];
+ksort($name6);
+print_r($name6);
+// foreach($name6 as $item => $value){
+//     echo "keys= " . $item . ", value= " . $value . ", ";
+//     echo "<br>";
+// }   // 4) ksort meaning in serial maintaince from A to z 
+
+echo "<br>";
+
+$name7 = ["sumon"=> "23", "Ashakil"=> "56", "mostak"=> "67", "Dsazzad"=>"21"];
+arsort($name7);   // 5) arsort meaning in serial maintaince from Maximum to minimum
+print_r($name7);
+
+echo "<br>";
+
+$name8 = ["sumon"=> "23", "Ashakil"=> "56", "mostak"=> "67", "Dsazzad"=>"21"];
+krsort($name8);   // 5) krsort meaning in serial maintaince from Z to A
+print_r($name8);
+
+echo "<br>";
+
+$age2=array("Peter"=>"35","Ben"=>"37","Joe"=>"43");
+print_r(array_change_key_case($age2,CASE_UPPER));
+
+echo "<br>";
 
 ?> 
 </body>
