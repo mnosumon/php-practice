@@ -648,6 +648,23 @@ echo "<br>";
         }
     }
 
+    echo "<br>";
+
+//Create a PHP program to reverse a string without using the built-in strrev() function.
+
+    function stringRevesrs($strings) {
+        $recievedReversed = "";  // Initialize an empty string to store the reversed string
+        $length = strlen($strings); // Get the length of the input string
+        // Loop through the string in reverse order
+        for ($i=$length-1; $i >= 0; $i--) { 
+            // $recievedReversed = $recievedReversed . $strings[$i];
+            $recievedReversed .= $strings[$i];  // Append each character to the reversed string
+        }
+        return $recievedReversed;
+    }
+    $result = stringRevesrs("Amar Sonar Bangle");
+    echo $result;
+
 
     echo "<br>";
     echo "<br>";
