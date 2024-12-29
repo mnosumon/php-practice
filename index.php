@@ -597,6 +597,28 @@ echo "<br>";
 
     echo "<br>";
 
+// Write a PHP function to find the maximum value in an array
+
+    function maxVal($numbers) {
+        $maxvalue = $numbers[0];
+
+        foreach ($numbers as $value) {
+            if ($value > $maxvalue) {
+                $maxvalue = $value;
+            }
+        }
+        return $maxvalue;
+    }
+    $numbers = [43,6,78,5,81,21];
+    $result = maxVal($numbers);
+    echo $result;
+
+    echo "<br>";
+    echo "<br>";
+    echo "<br>";
+    echo "<br>";
+    echo "<br>";
+    echo "<br>";
     echo "<br>";
 
 ?> 
