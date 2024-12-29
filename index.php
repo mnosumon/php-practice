@@ -579,8 +579,17 @@ echo "<br>";
     $faren = fareVal(100);
     echo $faren;
 
-
     echo "<br>";
+
+    $fruits3 = array("apple", "banana", "mango");
+    foreach ($fruits3 as $value) {
+        echo $value . "<br>";
+    }
+
+    $fruits4 = array("key1"=>"G048dr", "key2"=>"w11R", "key3"=>"gitoE4", "key4"=>"Nai57",);
+    foreach ($fruits4 as $key => $value) {
+        echo $key . " = " . $value ."<br>";
+    }
 
     echo "<br>";
 
