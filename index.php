@@ -614,6 +614,19 @@ echo "<br>";
     echo $result;
 
     echo "<br>";
+
+// Write a PHP script to merge two arrays and remove duplicate values.
+    $margeArr1 = ["Apple", "Banana", "Mango", "Grap", "FineApple"];
+    $margeArr2 = ["Lemon", "Gowava", "Dalim", "Orange", "FineApple"];
+    $margeArr = array_merge($margeArr1, $margeArr2); //merge array 
+    $uniqueArray = array_unique($margeArr); //remove duplicate array object
+    print_r($uniqueArray);
+    foreach ($uniqueArray as $value) {
+        echo $value . "<br>";
+    }
+
+
+
     echo "<br>";
     echo "<br>";
     echo "<br>";
