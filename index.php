@@ -448,13 +448,13 @@
 
 
 $name3 = ["sumon", "shakil", "mostak", "sazzad"];
-sort($name3);       // 1) sort meaning in reverse
+sort($name3);       // 1) sort meaning in a,b,c,d (a-z)...... serial mantinace
 print_r($name3);
 
 echo   "<br>";
 
 $name4 = ["sumon", "shakil", "mostak", "sazzad"];
-rsort($name4);      // 2) rsort meaning in noraml behavior
+rsort($name4);      // 2) rsort meaning in  z,x,w,v (z-a)...... serial mantinace
 print_r($name4);
 
 echo   "<br>";
@@ -566,12 +566,14 @@ echo "<br>";
 
     echo "<br>";
 
+
+    $faren;
     function fareVal($celci) {
+        global $faren;
         $faren = ($celci * 9/5) + 32;
-        return  $faren; 
     }
-    $faren = fareVal(100);
-    echo $faren;
+    fareVal(100);
+    echo "function and varialble test = " . $faren;
 
     echo "<br>";
 
@@ -624,6 +626,16 @@ echo "<br>";
     foreach ($uniqueArray as $value) {
         echo $value . "<br>";
     }
+
+    echo "<br>";
+// Create a PHP program to sort an associative array by its keys in ascending order.
+    $sortArr = ["b"=>"Banana", "m"=>"Mango", "g"=>"Grap", "f"=>"FineApple", "a"=>"Apple"]; 
+    ksort($sortArr);
+    foreach ($sortArr as $key => $value) {
+        echo $key ." = ".$value . "<br>";
+    }
+
+    echo "<br>";
 
 
 
