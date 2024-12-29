@@ -636,7 +636,17 @@ echo "<br>";
     }
 
     echo "<br>";
+// Write a PHP script to count the number of vowels in a string.
 
+    $letters = range('A', 'Z');  // Generate an array of uppercase letters
+    $letter = array_map('strtolower', $letters);  // Convert letters to lowercase
+    $vowels = ["a", "E", "i", "o", "u"];  // Define vowels
+    $vowel = array_map('strtolower', $vowels); 
+    foreach ($letter as $value) {
+        if (in_array($value, $vowel)) {  // Check if the letter is a vowel
+            echo $value . " ";
+        }
+    }
 
 
     echo "<br>";
