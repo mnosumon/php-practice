@@ -522,12 +522,8 @@ echo "<br>";
 $helo = "HanP, is as proa, 323#@$, alllj4GG";
 $normalString = strtolower(preg_replace("/[^A-Za-z0-9]/", '', $helo));
 $reverseString = strrev($normalString);
-if ($normalString === $reverseString) {
-    echo "heloo";
-}else{
-    echo "fase";
-}
-// echo $normalString === $reverseString;
+
+echo $reverseString;
 
 echo "<br>";
 
@@ -556,6 +552,41 @@ echo "<br>";
     }
     echo "<br>";
 
+// Create a PHP function to convert a temperature from Celsius to Fahrenheit.
+    // $farenheit = 0;
+    // public function getFahrenheit($celcious) {
+    //     $farenheit = ($celcious * 9/5) + 32;
+    // }
+    // getFahrenheit(100);
+    // echo $farenheit;
+
+    class Farenheit{
+        public $farenheit;
+        function farenValue($celciuos)  {
+            $this->farenheit = ($celciuos * 9/5) + 32;
+        }
+    }
+    $result = new Farenheit();
+    $result->farenValue(100);
+    echo $result->farenheit;
+
+    echo "<br>";
+
+    function fareVal($celci) {
+        $faren = ($celci * 9/5) + 32;
+        return  $faren; 
+    }
+    $faren = fareVal(100);
+    echo $faren;
+
+
+    echo "<br>";
+
+    echo "<br>";
+
+    echo "<br>";
+
+    echo "<br>";
 
 ?> 
 </body>
