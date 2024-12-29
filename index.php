@@ -693,8 +693,20 @@ echo "<br>";
     echo $perlacStr;
     // echo $strJoin;
 
-
     echo "<br>";
+
+
+    $string = "Amar sonar bangla ami tomay vlao";  // Original string
+    $substring = "ami s";  // Substring to check for
+    
+    // Check if the substring exists in the string
+    if (strpos($string, $substring) !== false) {
+        echo "this is striong";
+    }else{
+        echo "its not string";
+    }
+    
+
     echo "<br>";
     echo "<br>";
     echo "<br>";
