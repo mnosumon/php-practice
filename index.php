@@ -665,6 +665,34 @@ echo "<br>";
     $result = stringRevesrs("Amar Sonar Bangle");
     echo $result;
 
+    echo "<br>";
+
+    $aa = 'Amar Sonar Bangle';
+    $aaa = explode(' ', $aa);
+    $aaaa = array_reverse($aaa);
+    $aaaaa = implode($aaaa);
+    echo $aaaaa;
+
+    echo "<br>";
+
+    $b = 'Amar Sonar';  // The original string
+    $bb = explode(' ', $b);  // Split the string by spaces
+    $bbb = join('', $bb);  // Join the array into a single string without spaces
+    $bbbb = strrev($bbb); 
+    print_r($bbbb); // Reverse the concatenated string
+    // Convert the reversed string to lowercase
+    
+    echo "<br>";
+
+// Write a PHP script to replace all spaces in a string with underscores.
+
+    $stringWth_s = 'Amar Sonar Bangle';
+    // $explodes = explode(' ',$stringWth_s);
+    // $strJoin = join("_", $explodes);
+    $perlacStr = str_replace(' ','_',$stringWth_s);
+    echo $perlacStr;
+    // echo $strJoin;
+
 
     echo "<br>";
     echo "<br>";
