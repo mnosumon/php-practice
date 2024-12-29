@@ -553,12 +553,6 @@ echo "<br>";
     echo "<br>";
 
 // Create a PHP function to convert a temperature from Celsius to Fahrenheit.
-    // $farenheit = 0;
-    // public function getFahrenheit($celcious) {
-    //     $farenheit = ($celcious * 9/5) + 32;
-    // }
-    // getFahrenheit(100);
-    // echo $farenheit;
 
     class Farenheit{
         public $farenheit;
@@ -581,6 +575,8 @@ echo "<br>";
 
     echo "<br>";
 
+// Write a PHP script to create an indexed array of fruits and print each fruit using a foreach loop.
+
     $fruits3 = array("apple", "banana", "mango");
     foreach ($fruits3 as $value) {
         echo $value . "<br>";
@@ -592,6 +588,12 @@ echo "<br>";
     }
 
     echo "<br>";
+// Create an associative array with student names and their marks. Print the name of the student with the highest marks.
+    $students = ["Sumon"=>450, "sakil"=>600, "Mostak"=>130, "sazzad"=>350];
+    arsort($students);
+    foreach ($students as $key => $value) {
+        echo $key." = ".$value . "<br>";
+    }
 
     echo "<br>";
 
