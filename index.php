@@ -7,7 +7,12 @@
 </head>
 <body>
 <?php
-
+// echo $_SERVER['SCRIPT_NAME'];
+// echo "<br>";
+// echo $_SERVER['HTTP_HOST'];
+// echo "<br>";
+$port = $_SERVER['HTTP_HOST'] . $_SERVER['SCRIPT_NAME'];
+echo $port;
 
 // What are the different data types in PHP? Provide examples of each.
         // php te besh koyek dhoroner data type royeche. tar moddhe segoloke 2 vage vag kora jete pare. 1) scaler data type 2) compound data type 
@@ -789,18 +794,51 @@ echo "<br>";
 
 
     echo "<br>";
+//full file read
     $file_path = "hello.php";
     $file = fopen($file_path, 'r');
     echo fread($file, filesize($file_path));
     fclose($file);
-    echo "<br>";
-
-    // $file = fopen("hello.php", 'r') or die("unable to file");
-    // echo fread($file, filesize("hello.php"));
-    // fclose($file);
 
     echo "<br>";
+//first line read
+    $file_path = "hello.php";
+    $file = fopen($file_path, 'r');
+    echo fgets($file, filesize($file_path));
+    fclose($file);
+
     echo "<br>";
+//letter by letter read
+    $file_path = "hello.php";
+    $file = fopen($file_path, 'r');
+    while (!feof($file)) {
+        echo fgetc($file)." ";  
+    }
+    fclose($file);
+//new data read korte chaile
+    $file_path = "test.php";
+    // $file = fopen($file_path, 'w'); // w = new value replace korbe
+    $file = fopen($file_path, 'a'); //a = spred korbe,ager value thik rekhe new value add korbe
+    echo fwrite($file, "<br>" . "Sumon vai");
+    fclose($file);
+
+    echo "<br>";
+
+    $myfile = fopen("newfile.txt", "a") or die("Unable to open file!");
+    $txt = "Donald Duck\n";
+    fwrite($myfile, $txt);
+    $txt = "abbas gouya diye dilam gab gac\n";
+    fwrite($myfile, $txt);
+    fclose($myfile);
+
+    echo "<br>";
+
+    if (isset($_POST['userName'])) {
+        echo $_POST['userName'];
+    }
+
+
+
     echo "<br>";
     echo "<br>";
     echo "<br>";
