@@ -706,8 +706,39 @@ echo "<br>";
         echo "its not string";
     }
     
-
     echo "<br>";
+
+    
+// Write a PHP script to read a text file and print its contents line by line.
+
+
+     // Step 1: The script checks if the file exists.
+    // Step 2: If it exists, the script tries to open the file.
+    // Step 3: Reads and prints each line of the file.
+    // Step 4: If the file doesn't exist or can't be opened, it shows appropriate error messages.
+    // Step 5: After reading the file, it closes the handle to clean up.
+
+    // 1. File Name Specification
+    $file = "hello.php";
+                        // file path ba location select koralam, and seti file namok variable a nilam.
+
+    // 2. Check If File Exists
+    if (file_exists($file)) { // file er moddhe kichu ache kina ta check koralam, 
+        // 3. Open the File
+        $hadle = fopen($file, 'r');
+                                //read mode a file open korlam. $file=>ki open  kortechi, 'r'=> kon mode a open kortechi
+        // 4. Check If File Opened Successfully
+        if ($hadle) { //jodi hanlde er modde file tahke
+            // 5. Print File Contents
+            while ($line = fgets($hadle) !== false) { 
+                                                // hanlde theke file get korbe, orthat eker por ek file read korbe. and line er moddhe assign korbe.read kora seh hole false kore dibe.
+                echo $line;
+            }
+        }
+        // 6. Close the File
+        fclose($hadle); // then file ti close kore dite hobe.
+    }
+
     echo "<br>";
     echo "<br>";
     echo "<br>";
