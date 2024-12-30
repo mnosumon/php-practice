@@ -708,7 +708,7 @@ echo "<br>";
     
     echo "<br>";
 
-    
+
 // Write a PHP script to read a text file and print its contents line by line.
 
 
@@ -730,16 +730,43 @@ echo "<br>";
         // 4. Check If File Opened Successfully
         if ($hadle) { //jodi hanlde er modde file tahke
             // 5. Print File Contents
-            while ($line = fgets($hadle) !== false) { 
-                                                // hanlde theke file get korbe, orthat eker por ek file read korbe. and line er moddhe assign korbe.read kora seh hole false kore dibe.
-                echo $line;
+            while (($line = fgets($hadle)) !== false) { 
+                                                // hanlde theke file get korbe, orthat eker por ek file read korbe. and line er moddhe assign korbe.read kora sesh hole false kore dibe.
+                echo $line . "<br>";
             }
-        }
-        // 6. Close the File
+            // 6. Close the File
         fclose($hadle); // then file ti close kore dite hobe.
+        }else{
+            echo "file cannot open";
+        }
+    }else{
+        echo "file path undefind";
     }
 
     echo "<br>";
+     // Step 1: The script checks if the file exists.
+    // Step 2: If it exists, the script tries to open the file.
+    // Step 3: Reads and prints each line of the file.
+    // Step 4: If the file doesn't exist or can't be opened, it shows appropriate error messages.
+    // Step 5: After reading the file, it closes the handle to clean up.
+
+    $filePath = "hello.php";
+    if (file_exists($filePath)) {
+        $file = fopen($filePath, 'r');
+        if ($file) {
+            while (($line = fgets($file)) !== false) {
+                echo $line . "<br>";
+            }
+            fclose($file);
+        }else{
+            echo "empty file";
+        }
+    }else{
+        echo "file path not exist";
+    }
+
+
+  
     echo "<br>";
     echo "<br>";
     echo "<br>";
