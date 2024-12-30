@@ -789,6 +789,23 @@ echo "<br>";
 
 
     echo "<br>";
+    $file_path = "hello.php";
+    $file = fopen($file_path, 'r');
+    echo fread($file, filesize($file_path));
+    fclose($file);
+    echo "<br>";
+
+    // $file = fopen("hello.php", 'r') or die("unable to file");
+    // echo fread($file, filesize("hello.php"));
+    // fclose($file);
+
+    echo "<br>";
+    echo "<br>";
+    echo "<br>";
+    echo "<br>";
+    echo "<br>";
+    echo "<br>";
+    echo "<br>";
     echo "<br>";
 
 ?> 
