@@ -767,59 +767,31 @@ echo "<br>";
 
     echo "<br>";
 
-// Create a PHP program to write user input into a file.
+//Create a PHP program to count the number of lines in a file.
+    $file_path = "hello.php";
+    if (file_exists($file_path)) {
+        $fileOpen = fopen($file_path, 'r');
+        $lineCount= 0;
+        // while (($line = fgets($fileOpen)) !== false) {
+        //     $lineCount++;
+        // }
 
-$file_path = "userInput.php"; // Replace with your desired file name
-
-// Check if the form is submitted
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Get the user input from the form
-    $user_input = isset($_POST['user_input']) ? $_POST['user_input'] : '';
-
-    if (empty($user_input)) {
-        echo "Error: No input provided.<br>";
-    } else {
-        // Write the input to the file
-        if (file_put_contents($file_path, $user_input . PHP_EOL, FILE_APPEND)) {
-            echo "Input successfully written to the file.<br>";
-            echo "Content written: " . htmlspecialchars($user_input);
-        } else {
-            echo "Error: Unable to write to the file.";
+        while (!feof($fileOpen)) {
+            $line = fgets($fileOpen);
+            if ($line !== false) { // Ensure the line is valid
+                $lineCount++;
+            }
         }
+        echo $lineCount;
+        fclose($fileOpen);
     }
-}
+
+
 
     echo "<br>";
     echo "<br>";
 
 ?> 
-
-<!-- Create a PHP program to write user input into a file. -->
-
-
-<?php
-// Define the file path
-$file_path = "user_input.txt"; // Replace with your desired file name
-
-// Check if the form is submitted
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Get the user input from the form
-    $user_input = $_POST['user_input'];
-
-    // Write the input to the file
-    if (file_put_contents($file_path, $user_input . PHP_EOL, FILE_APPEND)) {
-        echo "Input successfully written to the file.";
-    } else {
-        echo "Error: Unable to write to the file.";
-    }
-}
-?>
-
-    <form method="POST" action="">
-        <label for="user_input">Enter Text:</label><br>
-        <textarea id="user_input" name="user_input" rows="4" cols="50" required></textarea><br><br>
-        <button type="submit">Submit</button>
-    </form>
 
 
 </body>
